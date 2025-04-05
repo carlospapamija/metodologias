@@ -1,9 +1,9 @@
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.constants import ParseMode
 from telegram.ext import Application, CommandHandler, ContextTypes
+from telegram_token import TELEGRAM_TOKEN
 from textos import textos
 import json
-
 
 bot_name = "Metodologías de desarrollo"
 
@@ -34,7 +34,7 @@ async def contacto(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.effective_chat.send_message(text = textos["Contactanos"], parse_mode = ParseMode.HTML)
 
 def main() -> None:
-    application = Application.builder().token("8186738195:AAGV68G2ZUlPJPkJ7BS83W1kl87WJtLUREU").build()
+    application = Application.builder().token("TELEGRAM_TOKEN").build()
 
 
     application.add_handler(CommandHandler("start", start))
