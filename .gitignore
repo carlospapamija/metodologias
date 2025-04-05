@@ -1,0 +1,11 @@
+# Archivos sensibles o locales
+telegram_token.py
+
+# Entornos virtuales
+venv/
+.env
+
+# Archivos del sistema
+__pycache__/
+*.pyc
+.DS_Store
